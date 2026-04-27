@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Resource Allocation - NGO Dashboard</title>
+    <!-- Modern Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icon Font -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="logo">
+                    <i class="ri-radar-line"></i>
+                </div>
+                <h2>Aura<span>Connect</span> <span class="brand-region" style="font-size: 14px; color: var(--text-muted); font-weight: normal; margin-left: 4px;">Mumbai</span></h2>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#dashboard" class="nav-item active" data-view="dashboard">
+                    <i class="ri-dashboard-3-line"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#data-entry" class="nav-item" data-view="data-entry">
+                    <i class="ri-file-add-line"></i>
+                    <span>Data Ingestion</span>
+                </a>
+                <a href="#volunteers" class="nav-item" data-view="volunteers">
+                    <i class="ri-group-line"></i>
+                    <span>Volunteers</span>
+                </a>
+                <a href="#tasks" class="nav-item" data-view="tasks">
+                    <i class="ri-task-line"></i>
+                    <span>Task Matching</span>
+                </a>
+            </nav>
+
+            <div class="user-profile">
+                <img src="./download.png" alt="User Avatar" class="avatar">
+                <div class="user-info">
+                    <span class="user-name">Rohit</span>
+                    <span class="user-role">Program Manager</span>
+                </div>
+                <button class="icon-btn"><i class="ri-settings-3-line"></i></button>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="topbar">
+                <div class="search-bar">
+                    <i class="ri-search-line"></i>
+                    <input type="text" placeholder="Search resources, volunteers, or tasks...">
+                </div>
+                <div class="topbar-actions">
+                    <button class="icon-btn notification-btn">
+                        <i class="ri-notification-3-line"></i>
+                        <span class="badge">3</span>
+                    </button>
+                    <button class="btn btn-primary new-task-btn" onclick="app.navigateTo('data-entry')">
+                        <i class="ri-add-line"></i> New Report
+                    </button>
+                </div>
+            </header>
+
+            <div class="view-container" id="view-container">
+                <!-- Views will be dynamically injected here by JS -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/components/dashboard.js"></script>
+    <script src="js/components/data-entry.js"></script>
+    <script src="js/components/volunteers.js"></script>
+    <script src="js/components/tasks.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
+

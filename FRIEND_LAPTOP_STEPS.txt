@@ -1,0 +1,32 @@
+SMART RESOURCE ALLOCATION - FRIEND LAPTOP RUN STEPS
+
+Copy these folders to your friend's laptop:
+
+1. Backend folder:
+   c:\Users\Rohit\OneDrive\Desktop\backend
+
+2. Frontend folder:
+   c:\Users\Rohit\Downloads\Smart_allocation_system-main
+
+On your friend's laptop:
+
+1. Install Python if it is not installed.
+   Download: https://www.python.org/downloads/
+   Important: tick "Add Python to PATH" during install.
+
+2. Open the backend folder and double-click:
+   run_backend.bat
+
+3. Open the frontend folder and double-click:
+   run_frontend.bat
+
+4. Open the app in browser:
+   http://127.0.0.1:5500
+
+Backend API:
+   http://127.0.0.1:8000
+
+Note:
+The backend now has built-in demo seed data. It can start even if data/store.json is missing.
+The live SQLite database is created automatically on each laptop in:
+   %LOCALAPPDATA%\SmartAllocationBackend\smart_allocation.sqlite3

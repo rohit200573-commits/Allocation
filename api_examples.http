@@ -1,0 +1,61 @@
+### Health check
+GET http://127.0.0.1:8000/api/health
+
+### Frontend-compatible data
+GET http://127.0.0.1:8000/api/data
+
+### Open tasks
+GET http://127.0.0.1:8000/api/tasks/open
+
+### Suggested matches for a need
+GET http://127.0.0.1:8000/api/tasks/N-1042/matches
+
+### Create a new community need
+POST http://127.0.0.1:8000/api/needs
+Content-Type: application/json
+
+{
+  "category": "Food / Nutrition",
+  "severity": "High",
+  "location": "Dharavi",
+  "description": "Families need cooked meals and dry ration kits.",
+  "peopleAffected": 120,
+  "reportedBy": "Field Team Beta"
+}
+
+### Register a volunteer
+POST http://127.0.0.1:8000/api/volunteers
+Content-Type: application/json
+
+{
+  "name": "Neha Rao",
+  "skills": ["Logistics", "Driving"],
+  "location": "Kurla West",
+  "availability": "Available Now",
+  "languages": ["Hindi", "English"],
+  "reliabilityScore": 90
+}
+
+### Assign a volunteer to a need
+POST http://127.0.0.1:8000/api/assignments
+Content-Type: application/json
+
+{
+  "needId": "N-1042",
+  "volunteerId": "V-002",
+  "assignedBy": "Program Manager"
+}
+
+### Analytics
+GET http://127.0.0.1:8000/api/analytics
+
+### Notifications
+GET http://127.0.0.1:8000/api/notifications
+
+### Mark notification as read
+PATCH http://127.0.0.1:8000/api/notifications/NT-1001
+Content-Type: application/json
+
+{
+  "isRead": true
+}
